@@ -9,9 +9,6 @@
 <body>
 
 
-<script src="js/jquery-2.2.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!--<script src="js/script.js"></script>-->
 <script>
     //    declare array
 
@@ -28,7 +25,7 @@
 
     arrat_declare.forEach(function (index, number, array) {
         console.log(index + ' ' + number);
-    })
+    });
 
 
     //    add and delete end of array
@@ -47,15 +44,25 @@
     console.log(arrat_declare);
     //remove the front
     arrat_declare.shift();
-    console.log(arrat_declare)
+    console.log(arrat_declare);
 
     //remove front and back of array
 
 
     //find the index of an item in an array
+    var pos = arrat_declare.indexOf('hello');
+    console.log(pos);
 
-    console.log(arrat_declare.indexOf('hello'));
+    //copy an array
 
+    var newarray = arrat_declare.slice();
+
+    var remove_pos = arrat_declare.splice(pos, 1);
+    console.log(remove_pos);
+
+    // display copy of an array
+
+    console.log('new array created ' + newarray);
 
 
 
